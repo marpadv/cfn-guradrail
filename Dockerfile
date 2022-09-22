@@ -1,7 +1,8 @@
-FROM ubuntu:18.04
+FROM public.ecr.aws/ubuntu/ubuntu:22.04 AS core
 RUN apt-get update && apt-get install -y \
     curl \
     git \
+    wget \
     python3.4 \
     python3-pip
 RUN set -ex \
